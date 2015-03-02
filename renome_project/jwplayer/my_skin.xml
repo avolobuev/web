@@ -1,0 +1,12 @@
+<skin target='6.0' name='my_skin' author='smeh_ilya'>
+	<components>
+		<component name='controlbar'>
+			<settings>
+				
+			</settings>
+			<elements>
+				
+			</elements>
+		</component>
+	</components>
+</skin>
