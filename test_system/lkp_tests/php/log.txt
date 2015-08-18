@@ -1,0 +1,79 @@
+:: 20.12.2013 8:35:52 /lkp_tests/php/get_fio.php ORA-12640: сбой при инициализации сервиса аутентификации.While connecting.In _connect(...); 
+:: 23.12.2013 10:47:05 /lkp_tests/php/get_tests.php ORA-01008: не все переменные привязаны. While executing:SELECT TEST_ID,
+			 TEST_NAME,
+			 TEST_DESCR,
+			 TEST_DTTM,
+			 DECODE(STATUS_FLG,'P','нет','O','да') AS STATUS_FLG
+      FROM TB_TEST 
+	  WHERE OWNER_ID=:PR1
+	  AND STATUS_FLG = 'O'
+	  ORDER BY TEST_DTTM;In _exec(...); 
+:: 23.12.2013 10:47:09 /lkp_tests/php/get_tests.php ORA-01008: не все переменные привязаны. While executing:SELECT TEST_ID,
+			 TEST_NAME,
+			 TEST_DESCR,
+			 TEST_DTTM,
+			 DECODE(STATUS_FLG,'P','нет','O','да') AS STATUS_FLG
+      FROM TB_TEST 
+	  WHERE OWNER_ID=:PR1
+	  AND STATUS_FLG = 'O'
+	  ORDER BY TEST_DTTM;In _exec(...); 
+:: 23.12.2013 10:59:04 /lkp_tests/php/get_tests.php ORA-01008: не все переменные привязаны. While executing:SELECT TEST_ID,
+			 TEST_NAME,
+			 TEST_DESCR,
+			 TEST_DTTM,
+			 DECODE(STATUS_FLG,'P','нет','O','да') AS STATUS_FLG
+      FROM TB_TEST 
+	  WHERE OWNER_ID=:PR1
+	  AND STATUS_FLG = 'O'
+	  ORDER BY TEST_DTTM;In _execq(...); 
+:: 23.12.2013 10:59:21 /lkp_tests/php/get_tests.php ORA-01008: не все переменные привязаны. While executing:SELECT TEST_ID,
+			 TEST_NAME,
+			 TEST_DESCR,
+			 TEST_DTTM,
+			 DECODE(STATUS_FLG,'P','нет','O','да') AS STATUS_FLG
+      FROM TB_TEST 
+	  WHERE OWNER_ID=:PR1
+	  AND STATUS_FLG = 'O'
+	  ORDER BY TEST_DTTM;In _execq(...); 
+:: 23.12.2013 11:03:00 /lkp_tests/php/get_tests.php ORA-01008: не все переменные привязаны. While executing:SELECT TEST_ID,
+			 TEST_NAME,
+			 TEST_DESCR,
+			 TEST_DTTM,
+			 DECODE(STATUS_FLG,'P','нет','O','да') AS STATUS_FLG
+      FROM TB_TEST 
+	  WHERE OWNER_ID=:PR1
+	  AND STATUS_FLG = 'O'
+	  ORDER BY TEST_DTTM;In _execq(...); 
+:: 23.12.2013 11:03:03 /lkp_tests/php/get_tests.php ORA-01008: не все переменные привязаны. While executing:SELECT TEST_ID,
+			 TEST_NAME,
+			 TEST_DESCR,
+			 TEST_DTTM,
+			 DECODE(STATUS_FLG,'P','нет','O','да') AS STATUS_FLG
+      FROM TB_TEST 
+	  WHERE OWNER_ID=:PR1
+	  AND STATUS_FLG = 'O'
+	  ORDER BY TEST_DTTM;In _execq(...); 
+:: 23.12.2013 11:03:36 /lkp_tests/php/get_tests.php ORA-01008: не все переменные привязаны. While executing:SELECT TEST_ID,
+			 TEST_NAME,
+			 TEST_DESCR,
+			 TEST_DTTM,
+			 DECODE(STATUS_FLG,'P','нет','O','да') AS STATUS_FLG
+      FROM TB_TEST 
+	  WHERE OWNER_ID=:PR1
+	  AND STATUS_FLG = 'O'
+	  ORDER BY TEST_DTTM;In _execq(...); 
+:: 23.12.2013 11:03:39 /lkp_tests/php/get_tests.php ORA-01008: не все переменные привязаны. While executing:SELECT TEST_ID,
+			 TEST_NAME,
+			 TEST_DESCR,
+			 TEST_DTTM,
+			 DECODE(STATUS_FLG,'P','нет','O','да') AS STATUS_FLG
+      FROM TB_TEST 
+	  WHERE OWNER_ID=:PR1
+	  AND STATUS_FLG = 'O'
+	  ORDER BY TEST_DTTM;In _execq(...); 
+:: 18.08.2015 18:50:22 /lk_borlas/lkp_tests/php/get_tests.php ORA-12545: Connect failed because target host or object does not exist.While connecting.In _connect(...); 
+:: 18.08.2015 18:50:25 /lk_borlas/lkp_tests/php/get_tests.php ORA-12545: Connect failed because target host or object does not exist.While connecting.In _connect(...); 
+:: 18.08.2015 18:50:29 /lk_borlas/lkp_tests/php/get_topics.php ORA-12545: Connect failed because target host or object does not exist.While connecting.In _connect(...); 
+:: 18.08.2015 18:50:44 /lk_borlas/lkp_tests/php/get_tree.php ORA-12545: Connect failed because target host or object does not exist.While connecting.In _connect(...); 
+:: 18.08.2015 18:50:47 /lk_borlas/lkp_tests/php/get_tests.php ORA-12545: Connect failed because target host or object does not exist.While connecting.In _connect(...); 
+:: 18.08.2015 18:51:12 /lk_borlas/lkp_tests/php/get_tree.php ORA-12545: Connect failed because target host or object does not exist.While connecting.In _connect(...); 

@@ -1,0 +1,263 @@
+/*----------------------------------------------------------------------------*/
+// предметы из базы, для данной кафедры
+Ext.define('subjects_model',
+{
+	extend: 'Ext.data.Model',
+	fields:
+	[
+		{name:'COUID'},
+		{name:'COUNAME'},
+		{name:'DIVID'}
+	]
+});
+var subjects_store=Ext.create('Ext.data.JsonStore',
+{
+	model:'subjects_model',
+	autoLoad:false,
+	proxy: 
+	{
+		type:'ajax',
+		url:'php/get_subjects.php',
+		reader: 
+		{
+			type:'json',
+			root:'rows'
+		}
+	}
+});
+/*--------------------------------------------------------------------------------------------------------------*/
+Ext.define('grid_tests',
+{
+	extend:'Ext.data.Model',
+	idProperty:'TEST_ID',
+	fields: 
+	[
+		{name:'TEST_ID'},
+		{name:'TEST_NAME'},
+		{name:'TEST_DESCR'},
+		{name:'TEST_DTTM'},
+		{name:'STATUS_FLG'}
+	]
+});
+var grid_tests=Ext.create('Ext.data.JsonStore',
+{
+	model:'grid_tests',
+	autoLoad:false,
+	autoSync:true,
+	proxy: 
+	{
+		type:'ajax', 
+		api:
+		{
+			read:'php/get_tests.php',
+			update:'php/theme_update_auto.php'
+		},
+		reader: 
+		{
+			type:'json',
+			root:'rows'
+		},
+		writer: 
+		{
+			type:'json',
+			writeAllFields:true
+		}
+	}
+});
+var sTests=Ext.create('Ext.data.JsonStore',
+{
+	model:'grid_tests',
+	autoLoad:false,
+	proxy: 
+	{
+		type:'ajax', 
+		url:'php/get_tests.php',
+		reader: 
+		{
+			type:'json',
+			root:'rows'
+		}
+	}
+});
+/*----------------------------------------------------------------------------*/
+var qtype=Ext.create('Ext.data.Store', 
+{
+	fields: 
+	[
+		{name:'type'},
+		{name:'value'}
+	],
+	data:
+	[
+		{
+			"type":"Один из...",
+			"value":"0"
+		},
+		{
+			"type":"Несколько из...",
+			"value":"1"
+		}
+	]
+});
+var aright=Ext.create('Ext.data.Store',
+{
+	idProperty:'value',
+	fields:
+	[
+		{name:'data'},
+		{name:'value'}
+	],
+	data:
+	[
+		{
+			"data":"да",
+			"value":"1"
+		},
+		{
+			"data":"нет",
+			"value":"0"
+		}
+	]
+});
+var stTestStatus=Ext.create('Ext.data.Store',
+{
+	idProperty:'value',
+	fields:
+	[
+		{name:'data'},
+		{name:'value'}
+	],
+	data:
+	[
+		{
+			"data":"да",
+			"value":"1"
+		},
+		{
+			"data":"нет",
+			"value":"0"
+		}
+	]
+});
+/*----------------------------------------------------------------------------*/
+Ext.define('model_q',
+{
+	extend:'Ext.data.Model',
+	fields:
+	[
+		{name:'QUESTION_ID'},
+		{name:'QUESTION_TEXT'},
+		{name:'QUESTION_DESCR'},
+		{name:'QUESTION_PRICE'},
+		{name:'QUESTION_TIME'},
+		{name:'QUESTION_TYPE'},
+		{name:'TEST_ID'}
+	]
+});  
+var grid_q=Ext.create('Ext.data.JsonStore',
+{
+	model:'model_q',
+	autoLoad:false,
+	proxy:
+	{
+		type:'ajax',
+		url:'php/get_questions.php',
+		reader:
+		{
+			type:'json',
+			root:'rows'
+		}
+	}
+});
+/*----------------------------------------------------------------------------*/
+Ext.define('model_a',
+{
+	extend:'Ext.data.Model',
+	idProperty:'ANSWER_ID',
+	fields: 
+	[
+		{name: 'QUESTION_ID'},
+		{name: 'ANSWER_ID'},
+		{name: 'ANSWER_TEXT'},
+		{name: 'ANSWER_RIGHT'}
+	]
+});  
+var grid_a=Ext.create('Ext.data.JsonStore',
+{
+	model:'model_a',
+	autoLoad:false,
+	autoSync:true,
+	proxy: 
+	{
+		type:'ajax',
+		api:
+		{
+			read:'php/get_answers.php',
+			create:'php/a_insert.php',
+			update: 'php/a_update.php'
+		},
+		reader: 
+		{
+			type:'json',
+			root:'rows'
+		},
+		writer: 
+		{
+			type:'json',
+			writeAllFields:true
+		}
+	}
+});
+/*----------------------------------------------------------------------------*/
+var store_tree=Ext.create('Ext.data.TreeStore',
+{
+		autoLoad:false,
+		//clearOnLoad:false,
+		rootVisivle:false,
+		fields: 
+		[        
+			{name:'ball'},
+			{name:'text'},
+			{name:'id'},
+			{name:'right'},
+			{name:'wrong'},
+			{name:'time'},
+			{name:'date'}
+		],
+		proxy: 
+		{
+			type:'ajax',
+			url:'php/get_tree.php'
+		}, 
+		root: 
+		{
+			text:'Выберите тест',
+			id:'rootid',
+			expanded:false
+		}
+});
+/*----------------------------------------------------------------------------*/
+Ext.define('model_number',
+{
+	extend:'Ext.data.Model',
+	fields: 
+	[
+		{name: 'NUMBER'}
+	]
+});  
+var store_number=Ext.create('Ext.data.JsonStore',
+{
+	model:'model_number',
+	autoLoad:false,
+	proxy: 
+	{
+		type:'ajax',
+		url:'php/get_number.php',
+		reader: 
+		{
+			type:'json',
+			root:'rows'
+		}
+	}
+});
+/*----------------------------------------------------------------------------*/
